@@ -1,0 +1,28 @@
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  christmas_tree(4);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+}
+void print_line(int n) {
+  //n - length
+  for (int i = 0; i < n; i++) {
+    Serial.print("*");
+  }
+  Serial.println("");
+}
+void triangle(int n) {
+  //n - height
+  for (int i = 0; i < n; i++) {
+    print_line(i * 2 + 1);
+  }
+}
+void christmas_tree(int n) {
+  //n - height
+  for (int i = 3; i < 3+n; i++) {
+    triangle(i);
+  }
+}
